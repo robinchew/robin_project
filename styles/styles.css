@@ -74,65 +74,64 @@ body {
 }
 
 .contactFormContainer form input,
-  .contactFormContainer form textarea {
-    border: 1px solid #eee;
-    -webkit-transition: all 0.3s ease-in;
-    transition: all 0.3s ease-in;
-    padding: 11px 20px;
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-    width: 100%;
-  }
+.contactFormContainer form textarea {
+  border: 1px solid #eee;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  padding: 11px 20px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
 
-  .contactFormContainer form input:focus,
-  .contactFormContainer form textarea:focus {
-    border-color: #80bdff;
-    outline: 0;
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
+.contactFormContainer form input:focus,
+.contactFormContainer form textarea:focus {
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
 
-  .contactFormContainer form textarea {
-    resize: none;
-  }
+.contactFormContainer form textarea {
+  resize: none;
+}
 
-  .contactFormContainer form ::-webkit-input-placeholder {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    color: #6c757d;
-    opacity: 1;
-    font-family: 'Poppins', sans-serif;
-  }
+.contactFormContainer form ::-webkit-input-placeholder {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #6c757d;
+  opacity: 1;
+  font-family: 'Poppins', sans-serif;
+}
 
-  .contactFormContainer form :-ms-input-placeholder {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    color: #6c757d;
-    opacity: 1;
-    font-family: 'Poppins', sans-serif;
-  }
+.contactFormContainer form :-ms-input-placeholder {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #6c757d;
+  opacity: 1;
+  font-family: 'Poppins', sans-serif;
+}
 
-  .contactFormContainer form ::-ms-input-placeholder {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    color: #6c757d;
-    opacity: 1;
-    font-family: 'Poppins', sans-serif;
-  }
+.contactFormContainer form ::-ms-input-placeholder {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #6c757d;
+  opacity: 1;
+  font-family: 'Poppins', sans-serif;
+}
 
-  .contactFormContainer form ::placeholder {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    color: #6c757d;
-    opacity: 1;
-    font-family: 'Poppins', sans-serif;
-  }
+.contactFormContainer form ::placeholder {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #6c757d;
+  opacity: 1;
+  font-family: 'Poppins', sans-serif;
+}
 
 .contactFormContainer form .subjectInput,
-  .contactFormContainer form .messageInput {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
+.contactFormContainer form .messageInput {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
     grid-column: 1 /3;
 }
 
