@@ -42,7 +42,7 @@
                     
                     <input type="text" id="nameInput" name="nameInput" class="nameInput" required placeholder="Your Name*"/>
                     <label for="text" class="srOnly"></label>
-                    <input type="email" id="emailInput" name="email" class="emailInput" required placeholder="Your Email*" />
+                    <input type="email" id="emailInput" name="email" class="emailInput" oninput="emailedChanged(this.value)" required placeholder="Your Email*" />
                     <label for="email" class="srOnly"></label>
                     <input type="text" id="subjectInput" name="subjectInput" class="subjectInput" required placeholder="Subject*"/>
                     <label for="subjectInput" class="srOnly"></label>
@@ -50,7 +50,7 @@
                     <label for="messageInput" class="srOnly"></label>
                 </form>
 
-                <button type="submit" class="formSend" target="_blank" form="contactForm" rel="noopener noreferrer">SEND</button>
+                <button type="submit" class="formSend" target="_blank" form="contactForm" rel="noopener noreferrer"  >SEND</button>
             </div>
         </div>
 
@@ -81,5 +81,74 @@
                 // Get the element with id="defaultOpen" and click on it
                 document.getElementById("defaultOpen").click();
         </script>
+
+
+
+
+
+        <script>
+            //Validate email address on send
+            let savedEmail = emailInput.value;
+
+            function sendForm(e) {
+                let savedEmail = emailInput.value;
+                console.log("saved email", savedEmail)
+                const isValidEmail = ValidateEmail(savedEmail);
+                
+                if (isValidEmail === true) {
+                    console.log("worked")
+                }
+                else 
+                {    
+                    e.preventDefault()
+                console.log("failed")
+                }
+            }
+
+            document.getElementById("contactForm").onsubmit = sendForm
+
+            /*function ValidateEmail(savedEmail) {
+                console.log("email", savedEmail)
+                let enteredEmail = savedEmail
+                console.log("entered Email", enteredEmail)
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                console.log(enteredEmail.match(mailformat), enteredEmail)
+                if(enteredEmail.match(mailformat))
+                {
+                alert("Valid email address!");
+                console.log(savedEmail)
+                return true;
+                }
+                else
+                {
+                document.getElementById("emailInput").classList.add("error");
+                console.log(savedEmail)
+                return false;
+                }
+                }*/
+
+            function emailedChanged(val) {
+                document.getElementById("emailInput").innerHTML = val;
+                let enteredEmail = val
+                //console.log("entered Email", enteredEmail)
+                //onsole.log("value", val)
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                console.log(enteredEmail.match(mailformat), enteredEmail)
+                if(enteredEmail.match(mailformat))
+                {
+                //alert("Valid email address!");
+                console.log("valid email", enteredEmail, return)
+                return true;
+                }
+                else
+                {
+                document.getElementById("emailInput").classList.add("error");
+                console.log("invalid email", savedEmail, val)
+                return false;
+                }
+                }
+
+        </script>
+
     </body>
 </html>
