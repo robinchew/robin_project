@@ -90,10 +90,12 @@ body {
 
 .contactFormContainer form input:focus,
 .contactFormContainer form textarea:focus {
-  border-color: #80bdff;
   outline: 0;
+  /*
+  border-color: #80bdff;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  */
 }
 
 .contactFormContainer form textarea {
